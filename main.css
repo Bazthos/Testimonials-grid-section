@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Start styling the attribution */
+.attribution { 
+    position: fixed;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem; 
+    line-height: 1.6;
+    text-align: center; 
+    color:hsl(220, 15%, 55%);
+    width: 100%;
+}
+.attribution a { 
+    color: var(--Soft-blue);
+}
+.attribution a:hover{
+    color: var(--Cyan);
+    transition: color .3s;
+}
+
+/* Screen reader class to hide the content visually */
+.sr-only {
+    position: absolute !important;
+    margin: -1px !important;
+    -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+    border: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+
+html{
+    font-size: 100%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body{
+    background-color: hsl(210, 46%, 95%);
+    text-align: left;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*Styling card mobile version*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4.5rem 1.5rem 3rem;
+}
+
+main .card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: fit-content;
+    border-radius: 0.6rem;
+    margin-bottom: 1.3rem;
+    padding: 1.5rem 2rem 2rem;
+    box-shadow: 35px 45px 30px -30px hsla(220, 15%, 55%, 30%);
+}
+
+main .card > figure{
+    padding-bottom: 0.9rem;
+}
+
+main .card > figure > figcaption{
+    display: inline-block;
+    position: relative;
+    bottom: 0.2rem;
+    font-size: 0.6875rem;
+    color: hsla(0, 0%, 100%, 30%);
+    line-height: 0.9rem;
+
+}
+
+main .card > figure > figcaption > span{
+    font-size: 0.8125rem;
+    color:hsla(0, 0%, 100%, 80%);
+}
+
+main .card > figure > img{
+    border-radius: 50%;
+    width: 2rem;
+    margin-right: 0.8rem;
+}
+
+main .card > h2{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color:hsl(0, 0%, 100%);
+    padding-right: 0.3rem;
+    padding-bottom: 1rem;
+}
+
+main .card > p{
+    font-size: 0.8125rem;
+    color:hsla(0, 0%, 100%, 50%);
+    line-height: 1.1rem;
+}
+
+main .purple{
+    background-image: url("images/bg-pattern-quotation.svg"), linear-gradient(hsla(263, 55%, 52%, 100%),hsla(263, 55%, 52%, 100%));
+    background-repeat: no-repeat;
+    background-position: top 0% right 10%;
+}
+
+main .purple > figure > img{
+    border: 2px solid hsla(0, 0%, 100%, 30%);
+}
+
+main .purple > p{
+    padding-right: 1rem;
+}
+
+main .grey{
+    background-color: hsl(217, 19%, 35%);
+}
+
+main .white{
+    background-color: hsl(0, 0%, 100%);
+}
+
+main .white > figure > figcaption{
+    color: hsla(219, 29%, 14%, 30%);
+}
+
+main .white > figure > figcaption > span{
+    color:hsla(219, 29%, 14%, 80%);
+}
+
+main .white > p{
+    color: hsla(219, 29%, 14%, 50%);
+    padding-right: 0.1rem;
+}
+
+main .white > h2{
+    color:hsl(219, 29%, 14%);
+}
+
+main .black{
+    background-color: hsl(219, 29%, 14%);
+}
+
+main .black > figure > img{
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+main .black > p{
+    padding-right: 0.1rem;
+}
+
+@media screen and (min-width: 980px){
+    body{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main{
+        display: grid;
+        /* position: fixed; */
+        margin: 10vw 16vh;
+        height: auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: stretch;
+        justify-content: center;
+        column-gap: 1.9rem;
+        row-gap: 1.5rem;
+    }
+
+    main .card{
+        margin-bottom: 0rem;
+        padding: 1.5rem 2.2rem 2rem 2rem;
+    }
+
+    main .card > p{
+        padding-top: 0.5rem;
+    }
+
+    main .purple{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-position: top 0% right 20%;
+    }
+
+    main .grey{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    main .black{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        padding-bottom: 0rem;
+    }
+
+    main .black > p{
+        padding-right: 0.5rem;
+    }
+
+    main .jeanne{
+        grid-row-start: 2;
+        grid-row-end: 3;        
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding-bottom: 0rem;
+    }
+
+    main .kira{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        padding-bottom: 0rem;
+    }
+}
